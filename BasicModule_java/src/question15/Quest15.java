@@ -14,32 +14,22 @@ public class Quest15 {
 	System.out.println("Enter a number");
 	int number=br.nextInt();
 	int temp=number;
-	int a[]=new int[number];
-	for(int i=0;i<number;i++)
+	int sum=0;
+	System.out.println("The divisors of the number are");
+
+	for(int i=1;i<=number/2;i++)
 	{
 	if(number%i==0)
 		
 	{
-	a[i]=br.nextInt();
+		System.out.println(i+"");
+		sum+=i;
 	}
 	}
 	
+	System.out.println("The sum of the divisors are"+sum);
 		
 	
-	System.out.println("The divisors of the number are");
-
-	for(int i=0;i<number;i++)
-	{
-		System.out.println(""+a[i]);
-	}
-	
-	
-	int sum=0;
-	for(int i=0;i<number;i++)
-	{
-		sum+=a[i];
-	}
-	System.out.println("The sum of the divisors are"+sum);
 	if(temp==sum)
 	{
 		System.out.println("It is a perfect number");
