@@ -9,6 +9,17 @@ public class Case3{
 	{
 	
 	int a[]=new int[10];
+	String name;
+	String address;
+	String contact;
+	String branch;
+	String mail;
+	
+	String pt;
+	String pid;
+	
+	
+	
 	
 	for(int i=0;i<10;i++)
 	{
@@ -16,29 +27,28 @@ public class Case3{
 	}
 	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 	String proceed1;
-	do
-	{
+	
 	System.out.println("Enter your Name");
-	String name=br.readLine();
+	name=br.readLine();
 	System.out.println("Enter your Address");
-	String address=br.readLine();
+	 address=br.readLine();
 	System.out.println("Enter your ContactNumber");
-	String contact=br.readLine();
+    contact=br.readLine();
 	System.out.println("Enter your Branch");
-	String branch=br.readLine();
+	branch=br.readLine();
 	System.out.println("Enter your Email-Id");
-	String mail=br.readLine();
+	 mail=br.readLine();
 	System.out.println("Enter your ProofType");
-	String pt=br.readLine();
+	 pt=br.readLine();
 	System.out.println("Enter your ProofId");
-	String pid=br.readLine();
-	System.out.println("Do you want to proceed?(yes/no)");
-	String proceed=br.readLine(); 
+	 pid=br.readLine();
+	//System.out.println("Do you want to proceed?(yes/no)");
+	//String proceed=br.readLine(); 
 	int flag=0;
 	int i;
-	if(proceed.equalsIgnoreCase("yes"))
+	//if(proceed.equalsIgnoreCase("yes"))
 		 
-	{
+	//{
 		
 	for( i=0;i<25;i++)
 	{
@@ -49,17 +59,22 @@ public class Case3{
 	flag=1;
 	break;
 	}
-	}
+	//}
 	
+	
+	
+	}
 	if(flag==1)
+	{
 		System.out.println("Thank you  for registering your id is"+a[i]);
 	
-	
-	
-	System.out.println("Do you want to continue registration (y/n)?");
+	}
+	System.out.println("Do you want to continue registration (yes/no)?");
       proceed1=br.readLine(); 
 	
-	}while(proceed1.equalsIgnoreCase("n"));
+      if(proceed1.equalsIgnoreCase("yes"))
+      {
+	
 	
 	
 		System.out.println("Do you want to update the email id?(yes/no));");
@@ -72,6 +87,16 @@ public class Case3{
 			System.out.println("Enter your Email-Id");
 			 mail=br.readLine();
 			 System.out.println("Email updated");
+			 System.out.println("Your details are as follows");
+				
+				System.out.println("Name   :"+name);
+				System.out.println("Address   :"+address);
+				System.out.println("ContatNumber  :"+contact);
+				System.out.println("Branch   :"+branch);
+				System.out.println("Mail   :"+mail);
+				System.out.println("ProofType   :"+pt);
+				System.out.println("ProofId   :"+pid);
+					
 		}
 		else if (proceed2.equalsIgnoreCase("no"))
 		{
@@ -81,7 +106,7 @@ public class Case3{
 			System.out.println("Address   :"+address);
 			System.out.println("ContatNumber  :"+contact);
 			System.out.println("Branch   :"+branch);
-			System.out.println("Contact   :"+mail);
+			System.out.println("Mail  :"+mail);
 			System.out.println("ProofType   :"+pt);
 			System.out.println("ProofId   :"+pid);
 				
@@ -91,9 +116,26 @@ public class Case3{
 		{
 			System.out.println("invalid");
 		}
-
+      }
+		  else if(proceed1.equalsIgnoreCase("no"))
+			  
+		   {
+			  System.out.println("Your details are as follows");
+				
+				System.out.println("Name   :"+name);
+				System.out.println("Address   :"+address);
+				System.out.println("ContatNumber  :"+contact);
+				System.out.println("Branch   :"+branch);
+				System.out.println("Mail  :"+mail);
+				System.out.println("ProofType   :"+pt);
+				System.out.println("ProofId   :"+pid);
+		   }
+		  else
+			   
+			  System.out.println("Invalid");
+	
 	}
-	}
+}
 
 	
 	
